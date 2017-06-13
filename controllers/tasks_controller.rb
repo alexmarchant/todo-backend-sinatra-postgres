@@ -17,7 +17,7 @@ class TasksController < Sinatra::Base
 
   post '/' do
     unless task = Task.create(filtered_params)
-      return internal_error_response
+      return internal_server_error_response
     end
 
     task.to_json
@@ -71,8 +71,8 @@ class TasksController < Sinatra::Base
       [404, {error: 'Task not found'}.to_json]
     end
 
-    def internal_error_response
-      [500, {error: 'Internal service error'}.to_json]
+    def internal_server_error_response
+      [500, {error: 'Internal server error'}.to_json]
     end
 
     def body_params

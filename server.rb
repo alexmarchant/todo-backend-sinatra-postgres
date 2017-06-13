@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative 'controllers/tasks_controller'
+require_relative 'database'
 
 set :port, ENV['PORT']
 
@@ -11,4 +12,3 @@ options "*" do
 end
 
 use TasksController
-run Sinatra::Application.run!
