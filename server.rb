@@ -11,4 +11,4 @@ options "*" do
 end
 
 use TasksController
-
+run Sinatra::Application.run!
