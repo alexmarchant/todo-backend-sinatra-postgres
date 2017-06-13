@@ -1,5 +1,3 @@
-require 'sequel'
-
 class Task
   attr_accessor :id
   attr_accessor :title
