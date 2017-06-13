@@ -38,6 +38,7 @@ class Task
   end
 
   def update(params)
+    params.each { |name, value| instance_variable_set("@#{name}", value) }
     TaskDataset.where(id: @id).update(params)
   end
 
