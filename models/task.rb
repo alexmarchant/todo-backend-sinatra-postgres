@@ -22,6 +22,7 @@ class Task
   end
 
   def self.delete_all
+    $db.exec('DELETE FROM tasks')
   end
 
   def self.find(id)
