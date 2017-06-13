@@ -4,7 +4,7 @@ class TasksController < Sinatra::Base
   before do
     content_type 'application/json'
     response.headers["Access-Control-Allow-Origin"] = "*"
-    response.headers["Allow"] = "GET, POST, PATCH, DELETE, OPTIONS"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PATCH, DELETE, OPTIONS"
     response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
   end
 
